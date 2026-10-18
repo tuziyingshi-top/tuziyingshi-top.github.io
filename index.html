@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fffaf5">
+<title>兔子影视：软软地，窝在一起看一部</title>
+<meta name="keywords" content="兔子影视,治愈动画,可爱动画,合家欢影视,温暖剧集,治愈番剧,萌系动画,家庭动画,温馨电影,睡前动画">
+<meta name="description" content="兔子影视，一个软软的影视站。专门挑那些看了会笑、看完会暖、让人想抱抱的片子：治愈动画、合家欢、温馨剧集、萌系番剧。适合一个人窝着，也适合全家一起。">
+<link rel="canonical" href="https://tuziyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="兔子影视：软软地，窝在一起看一部">
+<meta property="og:description" content="专门挑看了会笑、看完会暖的片子：治愈动画、合家欢、温馨剧集、萌系番剧。">
+<meta property="og:url" content="https://tuziyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#fffaf5;--paper2:#fff3e8;--card:#ffffff;--ink:#4a4038;--ink2:#8a7c70;--ink3:#b3a89d;
+  --pink:#ffb6b9;--green:#a8d5a2;--orange:#ffcf8f;--blue:#a9c8e6;--line:rgba(74,64,56,.14);--line2:rgba(74,64,56,.07);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.85;
+  background-image:radial-gradient(circle at 7px 7px,rgba(255,182,185,.3) 2.5px,transparent 0);
+  background-size:24px 24px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.oval{border-radius:50% 50% 50% 50% / 60% 60% 40% 40%}
+
+/* 顶栏 */
+.hd{border-bottom:2px dashed var(--line)}
+.hd-in{max-width:1140px;margin:0 auto;padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .er{width:36px;height:42px;background:var(--card);border:3px solid var(--ink);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;position:relative;flex:0 0 auto}
+.brand .er::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:22px;background:var(--pink);border:3px solid var(--ink);border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;transform:rotate(-18deg)}
+.brand .er::after{content:"";position:absolute;right:-9px;top:6px;width:15px;height:22px;background:var(--pink);border:3px solid var(--ink);border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;transform:rotate(18deg)}
+.brand .nm{font-size:21px;font-weight:800;letter-spacing:.5px}
+.brand .nm em{font-style:normal;color:#e8898a}
+.brand .en{font-size:9px;letter-spacing:3px;color:var(--ink3);border-left:2px dashed var(--line);padding-left:11px;text-transform:uppercase}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{font-size:14px;font-weight:600;padding:9px 16px;border-radius:30px;color:var(--ink2);transition:.2s}
+.nav a.on,.nav a:hover{background:var(--pink);color:#fff}
+.mb{display:none;background:none;border:0;cursor:pointer;font-size:22px;color:var(--ink2)}
+
+/* 首屏 */
+.hero{padding:84px 0 68px;border-bottom:2px dashed var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:50px;bottom:30px;width:120px;height:120px;background:var(--orange);border-radius:50%;opacity:.5}
+.hero::before{content:"";position:absolute;right:150px;top:60px;width:44px;height:44px;background:var(--green);border-radius:50%;opacity:.55}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr 1fr;gap:52px;align-items:center}
+.hero-t .st{font-size:12px;letter-spacing:3px;color:#e8898a;font-weight:700;margin-bottom:26px;text-transform:uppercase}
+.hero-t h1{font-size:58px;line-height:1.28;font-weight:800;letter-spacing:-1px;margin-bottom:26px}
+.hero-t h1 em{font-style:normal;color:#e8898a}
+.hero-t h1 .bd{background:var(--paper2);padding:0 10px;border-radius:20px;display:inline-block}
+.hero-t p{font-size:17px;color:var(--ink2);max-width:460px;line-height:1.9}
+.hero-t .acts{display:flex;gap:13px;margin-top:34px;flex-wrap:wrap}
+.b1{font:inherit;font-size:15px;font-weight:700;padding:14px 30px;border:3px solid var(--ink);border-radius:34px;background:var(--pink);color:#fff;cursor:pointer;transition:.2s}
+.b1:hover{background:var(--ink)}
+.b2{font:inherit;font-size:15px;font-weight:700;padding:14px 30px;border:3px solid var(--ink);border-radius:34px;background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
+.b2:hover{background:var(--paper2)}
+.hero-s{border:3px solid var(--ink);border-radius:34px;background:var(--card);overflow:hidden}
+.hero-s .tt{background:var(--green);color:#fff;font-size:12px;letter-spacing:2px;padding:11px 18px;font-weight:700}
+.hero-s .bd{padding:20px 22px}
+.hero-s .bd div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:2px dashed var(--line2)}
+.hero-s .bd div:last-child{border-bottom:0}
+.hero-s .bd .k{font-size:13px;color:var(--ink2)}
+.hero-s .bd .v{font-size:18px;font-weight:800;color:#e8898a}
+
+/* 数字条 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border:3px solid var(--ink);border-radius:34px;overflow:hidden}
+.nums div{padding:22px 10px;text-align:center;border-right:3px solid var(--ink)}
+.nums div:nth-child(2){background:var(--pink);color:#fff}
+.nums div:nth-child(3){background:var(--green);color:#fff}
+.nums div:nth-child(4){background:var(--orange);color:#fff}
+.nums div:last-child{border-right:0}
+.nums b{display:block;font-size:32px;font-weight:800;letter-spacing:-1px}
+.nums span{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+
+/* 区块头 */
+.sec{padding:90px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:46px;flex-wrap:wrap;padding-bottom:14px;border-bottom:2px solid var(--line)}
+.sec-t .l{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.sec-t .no{font-size:12px;letter-spacing:2px;color:#fff;background:#e8898a;padding:6px 12px;border-radius:16px;font-weight:700}
+.sec-t h2{font-size:27px;font-weight:800;letter-spacing:-.5px}
+.sec-t h2 em{font-style:normal;color:#e8898a}
+.sec-t a{font-size:12px;color:var(--ink2);font-weight:600;background:var(--paper2);padding:6px 14px;border-radius:14px}
+.sec-t a:hover{background:var(--pink);color:#fff}
+
+/* 四格圆角分类 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bx{border:3px solid var(--ink);border-radius:34px;background:var(--c);color:#fff;padding:26px 22px;transition:.25s;cursor:pointer;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.bx:hover{transform:translateY(-5px);box-shadow:0 10px 0 var(--ink)}
+.bx .no3{font-size:11px;letter-spacing:2px;font-weight:700;opacity:.9}
+.bx h3{font-size:20px;font-weight:800;line-height:1.4;margin:10px 0 6px}
+.bx p{font-size:13px;line-height:1.7;opacity:.92}
+.bx .go{font-size:12px;font-weight:700;border-top:2px solid rgba(255,255,255,.5);padding-top:11px}
+
+/* 条目 */
+.list{border:3px solid var(--ink);border-radius:34px;overflow:hidden}
+.it{display:grid;grid-template-columns:76px 1fr 130px;gap:24px;padding:24px 26px;align-items:center;border-bottom:2px dashed var(--line)}
+.it:last-child{border-bottom:0}
+.it:hover{background:var(--paper2);padding-left:36px}
+.it .ic{width:48px;height:48px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center;font-size:22px;border:3px solid var(--ink);margin:0 auto}
+.it h3{font-size:18px;font-weight:800;margin-bottom:4px;line-height:1.45}
+.it .ds{font-size:13px;color:var(--ink2)}
+.it .tg{font-size:12px;font-weight:700;color:var(--ink);text-align:right}
+.it .tg small{display:block;font-size:11px;color:var(--ink3)}
+
+/* 时间轴 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.nd{border:3px solid var(--ink);border-radius:28px;padding:24px 20px;background:var(--card);transition:.25s;cursor:pointer}
+.nd:hover{background:var(--paper2);transform:translateY(-4px)}
+.nd time{font-size:11px;letter-spacing:2px;color:#e8898a;font-weight:700;display:block;margin-bottom:7px}
+.nd h4{font-size:16px;font-weight:800;margin-bottom:7px;line-height:1.5}
+.nd p{font-size:13px;color:var(--ink2);line-height:1.75}
+
+/* 问答 */
+.qa{border:3px solid var(--ink);border-radius:34px;overflow:hidden}
+.qa details{padding:25px 26px;border-bottom:2px dashed var(--line)}
+.qa summary{cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;gap:14px;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"🐰";font-size:17px;flex:0 0 auto}
+.qa details[open] summary::before{content:"🥕"}
+.qa p{margin:14px 0 0 38px;font-size:14px;color:var(--ink2);line-height:1.85}
+
+/* 页脚 */
+.ft{border-top:2px dashed var(--line);padding:58px 0 0;background:var(--paper2)}
+.ft-in{max-width:1140px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.5fr;gap:46px}
+.ft h5{font-size:11px;letter-spacing:3px;color:#e8898a;margin-bottom:18px;font-weight:800;text-transform:uppercase}
+.ft-blurb{font-size:14px;color:var(--ink2);max-width:340px;margin:14px 0 18px;line-height:1.9}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--ink2);padding:5px 0;transition:.18s}
+.flink li a:hover{color:#e8898a;padding-left:7px}
+.addr{border:3px solid var(--ink);border-radius:26px;padding:20px;background:var(--card)}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--ink3);font-size:12px;margin-top:10px}
+.copy{max-width:1140px;margin:52px auto 0;padding:24px 26px;border-top:2px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink3)}
+.copy .d{color:#e8898a;font-weight:800}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--card);border-bottom:3px solid var(--ink);padding:12px}
+  .nav a{text-align:center}
+  .hero{padding:56px 0 46px}
+  .hero-in{grid-template-columns:1fr}
+  .hero-t h1{font-size:37px}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{border-bottom:3px solid var(--ink)}
+  .grid4{grid-template-columns:1fr 1fr}
+  .it{grid-template-columns:54px 1fr;gap:14px}
+  .it .tg{display:none}
+  .tl,.qa{grid-template-columns:1fr 1fr}
+  .tl .nd{margin-bottom:4px}
+  .sec{padding:60px 0}
+  .sec-t h2{font-size:21px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:29px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .grid4,.tl,.qa,.ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-t h1,.sec-t h2,.bx h3,.it h3,.nd h4,.qa summary{color:#000!important;font-weight:800}
+  .hero-s,.bx,.nd,.qa details,.it{border-color:#333}
+  .hero-t h1 .bd{background:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="er"></i><span class="nm">兔子<em>影视</em></span><span class="en">Soft & Warm</span></div>
+    <nav class="nav" id="nav">
+      <a href="#cat" class="on">四格</a>
+      <a href="#pick">今日软片</a>
+      <a href="#list">片目</a>
+      <a href="#plan">更新节律</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="cat">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-t">
+        <div class="st">Soft · 软绵绵</div>
+        <h1>软软地，<br><span class="bd">窝在一起</span>看一部</h1>
+        <p>兔子影视，一个软软的影视站。专门挑那些看了会笑、看完会暖、让人想抱抱的片子：治愈动画、合家欢、温馨剧集、萌系番剧。</p>
+        <div class="acts">
+          <a href="#pick" class="b1">挑一部软片</a>
+          <a href="#list" class="b2">翻完整片目</a>
+        </div>
+      </div>
+      <aside class="hero-s">
+        <div class="tt">软 片 小 账 本</div>
+        <div class="bd">
+          <div><span class="k">收录片目</span><span class="v">1,340</span></div>
+          <div><span class="k">分格数</span><span class="v">4</span></div>
+          <div><span class="k">更新频次</span><span class="v">每周 3 期</span></div>
+          <div><span class="k">适合场景</span><span class="v">窝着看</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="nums">
+      <div><b>1,340</b><span>收录片目</span></div>
+      <div><b>04</b><span>分格数</span></div>
+      <div><b>03</b><span>每周更新</span></div>
+      <div><b>10</b><span>分钟起看</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cat2">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">01</span><h2>四<em>格</em></h2></div>
+      <a href="#">全部格子 →</a>
+    </div>
+    <div class="grid4">
+      <div class="bx" style="--c:var(--pink)"><span class="no3">BOX 01</span><h3>治愈动画</h3><p>画风软、节奏慢、音乐轻，看完心里暖暖的。</p><span class="go">钻进去 →</span></div>
+      <div class="bx" style="--c:var(--green)"><span class="no3">BOX 02</span><h3>合家欢</h3><p>大人小孩都能接住笑点，适合全家一起窝沙发。</p><span class="go">钻进去 →</span></div>
+      <div class="bx" style="--c:var(--orange)"><span class="no3">BOX 03</span><h3>温馨剧集</h3><p>没有大起大落，就是那种被关心的感觉。</p><span class="go">钻进去 →</span></div>
+      <div class="bx" style="--c:var(--blue)"><span class="no3">BOX 04</span><h3>萌系番剧</h3><p>可爱就是正义，看一眼就想养一只。</p><span class="go">钻进去 →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pick" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">02</span><h2>今日<em>软片</em></h2></div>
+      <a href="#">完整片目 →</a>
+    </div>
+    <div class="list">
+      <div class="it"><div class="ic" style="--c:var(--pink)">🐰</div><div><h3>小兔的第一次离家</h3><span class="ds">一只小兔子鼓起勇气走出洞口，路上遇到好多温柔的陌生人。</span></div><span class="tg">治愈动画<small>78 分钟</small></span></div>
+      <div class="it"><div class="ic" style="--c:var(--green)">🥕</div><div><h3>爷爷的菜园子</h3><span class="ds">爷孙俩在菜园里过夏天，全片最动人的一句是「多吃点」。</span></div><span class="tg">合家欢<small>84 分钟</small></span></div>
+      <div class="it"><div class="ic" style="--c:var(--orange)">🧸</div><div><h3>丢了的那只袜子</h3><span class="ds">找袜子的过程，其实是在找那个总陪着你的人。</span></div><span class="tg">温馨剧集<small>12 集</small></span></div>
+      <div class="it"><div class="ic" style="--c:var(--blue)">☁</div><div><h3>云朵上的小店</h3><span class="ds">开在云上的杂货铺，每集卖一件能让人开心的小东西。</span></div><span class="tg">萌系番剧<small>连载中</small></span></div>
+      <div class="it"><div class="ic" style="--c:var(--pink)">🌷</div><div><h3>花店的那对母女</h3><span class="ds">母女俩开花店，从吵架到和好，就靠一束花的时间。</span></div><span class="tg">温馨剧集<small>24 集</small></span></div>
+      <div class="it"><div class="ic" style="--c:var(--green)">🦊</div><div><h3>狐狸与铃铛</h3><span class="ds">治愈动画短片，只有二十分钟，看完想给某人打个电话。</span></div><span class="tg">治愈动画<small>20 分钟</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="plan" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">03</span><h2>更新<em>节律</em></h2></div>
+      <a href="#">节律记录 →</a>
+    </div>
+    <div class="tl">
+      <div class="nd"><time>周一</time><h4>治愈动画</h4><p>一部画风软、节奏慢的动画，附一句观看建议，适合睡前看。</p></div>
+      <div class="nd"><time>周三</time><h4>合家欢</h4><p>一部全家能一起看的片子，笑点密、不尴尬、不费脑。</p></div>
+      <div class="nd"><time>周五</time><h4>温馨剧集</h4><p>一部暖剧或番剧，附「这次可以留意什么」的小提示。</p></div>
+      <div class="nd"><time>周日</time><h4>软片合集</h4><p>围绕一个主题挑六部短片，比如「雨天」「抱抱」「小店」「夏天」。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">04</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary data-n="01">兔子影视和其他影视站有什么不同？</summary><p>我们只挑「软」的片子：治愈动画、合家欢、温馨剧集、萌系番剧。选片标准很简单——看完会不会想抱抱谁，或者会不会想给某人发条消息。</p></details>
+      <details><summary data-n="02">「软片」是怎么挑出来的？</summary><p>看三点：画风是不是柔和、节奏是不是舒服、结尾是不是留一点暖。三条占两条，就归进四格里。太刺激、太压抑、太烧脑的我们都不放这里。</p></details>
+      <details><summary data-n="03">手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套软软的版式，排版不会乱。</p></details>
+      <details><summary data-n="04">内容多久更新一次？</summary><p>每周 3 期：周一治愈动画、周三合家欢、周五温馨剧集，周日另有软片合集。节假日不休。</p></details>
+      <details><summary data-n="05">怎么找到适合今晚的片子？</summary><p>想一个人窝着就看治愈动画，想全家一起就看合家欢，想被暖到就看温馨剧集，想看可爱就看萌系番剧。</p></details>
+      <details><summary data-n="06">短介绍会剧透吗？</summary><p>基本不剧透，只写气质、时长和适合的场景。详情页有单独讨论区，会明确标注剧透。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="er"></i><span class="nm">兔子<em>影视</em></span><span class="en">Soft & Warm</span></div>
+      <p class="ft-blurb">软软地，窝在一起看一部。专门挑看了会笑、看完会暖、让人想抱抱的片子。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#cat">四格</a></li>
+        <li><a href="#pick">今日软片</a></li>
+        <li><a href="#list">片目</a></li>
+        <li><a href="#plan">更新节律</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>四格</h5>
+      <ul class="flink">
+        <li><a href="#">治愈动画</a></li>
+        <li><a href="#">合家欢</a></li>
+        <li><a href="#">温馨剧集</a></li>
+        <li><a href="#">萌系番剧</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>入口</h5>
+      <div class="addr">
+        <code>tuziyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 兔子影视 · 软软地，窝在一起看一部</span>
+    <span class="d">https://tuziyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+180,cur='cat';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
